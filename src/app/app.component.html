@@ -1,0 +1,25 @@
+<mat-form-field appearance="outline">
+  <mat-label>Autocomplete</mat-label>
+  <input matInput type="text" [matAutocomplete]="autocomplete" />
+
+  <mat-autocomplete #autocomplete="matAutocomplete">
+    @for(option of [1, 2, 3, 4, 5]; track option) {
+    <mat-option [value]="option">{{ option }}</mat-option>
+    }
+  </mat-autocomplete>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Autocomplete</mat-label>
+  <input
+    matInput
+    type="text"
+    [matAutocompleteMultiple]="multipleAutocomplete"
+  />
+
+  <app-autocomplete-multi #multipleAutocomplete="matAutocompleteMultiple">
+    @for(option of [1, 2, 3, 4, 5]; track option) {
+    <mat-option [value]="option">{{ option }}</mat-option>
+    }
+  </app-autocomplete-multi>
+</mat-form-field>

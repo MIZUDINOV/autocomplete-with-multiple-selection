@@ -1,0 +1,10 @@
+<ng-template>
+  <div
+    #panel
+    class="mat-mdc-autocomplete-panel mdc-menu-surface mdc-menu-surface--open"
+    [class.mat-mdc-autocomplete-visible]="showPanel()"
+    [class.mat-mdc-autocomplete-hidden]="!showPanel()"
+  >
+    <ng-content></ng-content>
+  </div>
+</ng-template>
